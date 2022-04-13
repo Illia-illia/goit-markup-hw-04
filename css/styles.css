@@ -114,12 +114,24 @@ ul {
 
 /* Contacts */
 .contacts{
-display: flex;
-margin-left: auto;
-}
+  display: flex;
+  margin-left: auto;
+  }
 
 .contacts-item:not(:last-child){
   margin-right: var(--margin50);
+}
+
+.tel::before{
+  content: '';
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../images/icons/smartphone.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .contacts .link {
