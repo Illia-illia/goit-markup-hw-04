@@ -8,6 +8,7 @@
   --hero-bg: #C4C4C4;
   --secbtn-color:#188ce8;
   --adress-color:rgba(255, 255, 255, 0.6);
+  --bg-soc-link:rgba(255, 255, 255, 0.1);
   --border-accent:#ECECEC;
   --back-button:#f5f4fa;
   --sec-border-accent: #EEEEEE;
@@ -15,6 +16,7 @@
   --margin9:9px;
   --margin10:10px;
   --margin16:16px;
+  --margin20:20px;
   --margin30:30px;
   --margin50:50px;
   --padding30:30px;
@@ -119,18 +121,12 @@ ul {
 .contacts{
   display: flex;
   margin-left: auto;
+  align-items: center;
   }
 
 .contacts-item:not(:last-child){
   margin-right: var(--margin50);
 }
-
- /* .contacts-icon{
-  width: 16px;
-  height: 12px;
-  fill: var(--secondary-text);
-  margin-right: 10px;
-} */
 
 .contacts .link {
   color: var(--secondary-text);
@@ -142,6 +138,12 @@ ul {
 
   padding-top: var(--padding32);
   padding-bottom: var(--padding32);
+}
+
+.contacts-icon{
+  margin-right: var(--margin10);
+  fill: currentColor;
+  vertical-align: middle;
 }
 
 /*Active */
@@ -309,7 +311,7 @@ display: flex;
 /* ==========Section our team ===================*/
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--back-button);
   padding-top: var(--padding94);
   padding-bottom: var(--padding94);
 }
@@ -326,6 +328,9 @@ display: flex;
   height: 428px;
   background-color: var(--secondary-accent);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-padding{
@@ -380,6 +385,39 @@ display: flex;
   fill: var(--secondary-accent);
 }
 
+/* ============Regular customers===========*/
+
+.reg-clients{
+  background-color: var(--secondary-accent);
+  padding-top: var(--padding94);
+  padding-bottom: var(--padding94);
+}
+
+.clients-list{
+  display: flex;
+  justify-content: center;
+}
+
+.clients-item + .clients-item{
+  margin-left: var(--margin30);
+}
+
+.clients-link{
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+}
+
+.clients-link:hover{
+  fill: var(--link-accent);
+  border: 1px solid var(--link-accent);
+}
+
 /* =============FOOTER====================== */
 
 .footer {
@@ -387,9 +425,15 @@ display: flex;
   padding-top: var(--padding60);
   padding-bottom: var(--padding60);
 }
+
+.footer-flex{
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-logo{
 display: block;
-margin-bottom: 20px;
+margin-bottom: var(--margin20);
 }
 
 .logo-secondary {
@@ -399,6 +443,7 @@ margin-bottom: 20px;
 .item-adress:not(:last-child){
   margin-bottom: var(--margin9);
 }
+
 .item-adress .link {
   color: var(--secondary-accent);
 
@@ -419,6 +464,45 @@ margin-bottom: 20px;
 .item-adress .link:hover,
 .item-adress .link:focus {
   color: var(--link-accent);
+}
+
+.join{
+  margin-left: 70px;
+}
+
+.join-title{
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  
+  color: var(--secondary-accent);
+  margin-bottom: var(--margin20) ;
+}
+
+.join-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-item + .join-item{
+  margin-left: var(--margin10);
+}
+
+.join-link{
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-soc-link);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--secondary-accent);
+}
+
+.join-link:hover,
+.join-link:focus{
+background-color: var(--link-accent);
 }
 
 /* ==========Portfolio =================*/
@@ -460,6 +544,9 @@ margin-bottom: 20px;
 .item-btn:focus {
   background: var(--link-accent);
   color: var(--secondary-accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .gallery{
@@ -473,6 +560,15 @@ margin-bottom: 20px;
   flex-basis: calc(100% / 3 - var(--padding30));
   margin-right: var(--padding30);
   margin-bottom: var(--padding30);
+}
+
+
+.gallery-link:hover,
+.gallery-link:focus{
+display: block;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+0px 4px 4px rgba(0, 0, 0, 0.06),
+1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-ptext{
