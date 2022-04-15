@@ -249,10 +249,9 @@ display: flex;
   width: 270px;
   height: 120px;
   background-color: var(--back-button);
-  padding-top: 25px;
-  padding-right: 100px;
-  padding-bottom: 25px;
-  padding-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-caption{
